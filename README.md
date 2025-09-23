@@ -11,14 +11,14 @@ Este projeto tem como objetivo desenvolver um aplicativo mobile completo para ce
 - **Git**: Controle de versão. `v2.44.0`
 - **VSCode**: Editor de código. `v1.89.0`
 - **Node.js**: Ambiente de execução. `v18.17.0`
-- **Expo CLI**: Desenvolvimento React Native. `v6.3.0`
+- **React**: Desenvolvimento React. `v18.0.0`
 - **Postman**: Testes de APIs. `v10.18.0`
 - **Figma**: Prototipagem da interface.
 - **Jira Software**: Gestão de tarefas e sprints.
 
 ## Tecnologias
 ### Frontend (Mobile)
-- **React Native** `v0.72.0`
+- **React** `v18.0.0`
 - **Expo** `v49.0.0`
 - **React Navigation** `v6.1.7`
 - **Styled Components** `v6.0.7`
