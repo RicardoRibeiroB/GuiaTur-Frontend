@@ -100,7 +100,7 @@ docs(readme): atualizar instruções de instalação
 style(components): ajustar indentação nos componentes
 refactor(api): reorganizar estrutura das controllers
 test(auth): adicionar testes para autenticação
-chore(deps): atualizar dependências do React Native
+chore(deps): atualizar dependências do paskage.js
 ```
 
 ## Pull Requests
