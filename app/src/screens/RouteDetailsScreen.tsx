@@ -302,65 +302,87 @@ export default function RouteDetailsScreen({
             </div>
 
             {/* Route Points List */}
-            <div className="space-y-3">
-              <h4 className="font-medium text-blue-900 mb-3">Pontos de Parada</h4>
+          <div className="mt-6">
+            <h4 className="font-semibold text-blue-900 mb-3">Pontos de Parada</h4>
 
-              <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-sm text-blue-900">Praça Central</p>
-                  <p className="text-xs text-gray-600">Ponto de encontro - 09:00</p>
+            <div className="space-y-3">
+              {/* Ponto 1 */}
+              <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-100">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-sm text-blue-900">Praça Central</p>
+                    <p className="text-xs text-gray-600">Ponto de encontro - 09:00</p>
+                  </div>
                 </div>
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs font-semibold bg-white border-green-300 text-green-700">
                   Início
                 </Badge>
               </div>
 
-              <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-sm text-blue-900">Igreja Matriz</p>
-                  <p className="text-xs text-gray-600">Visita guiada - 09:30</p>
+              {/* Ponto 2 */}
+              <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-sm text-blue-900">Igreja Matriz</p>
+                    <p className="text-xs text-gray-600">Visita guiada - 09:30</p>
+                  </div>
                 </div>
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs font-semibold bg-white border-blue-300 text-blue-700">
                   30 min
                 </Badge>
               </div>
 
-              <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-sm text-blue-900">Museu da Cidade</p>
-                  <p className="text-xs text-gray-600">Exposição histórica - 10:15</p>
+              {/* Ponto 3 */}
+              <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-sm text-blue-900">Museu da Cidade</p>
+                    <p className="text-xs text-gray-600">Exposição histórica - 10:15</p>
+                  </div>
                 </div>
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs font-semibold bg-white border-blue-300 text-blue-700">
                   45 min
                 </Badge>
               </div>
 
-              <div className="flex items-center space-x-3 p-3 bg-red-50 rounded-lg">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-sm text-blue-900">Mirante do Centro</p>
-                  <p className="text-xs text-gray-600">Vista panorâmica - 11:00</p>
+              {/* Ponto Final */}
+              <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-red-500 rounded-full shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-sm text-blue-900">Mirante do Centro</p>
+                    <p className="text-xs text-gray-600">Vista panorâmica - 11:00</p>
+                  </div>
                 </div>
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs font-semibold bg-white border-red-300 text-red-700">
                   Final
                 </Badge>
               </div>
             </div>
+          </div>
 
             {/* Map Actions */}
-            <div className="flex space-x-3 mt-4">
-              <Button variant="outline" className="flex-1 border-blue-600 text-blue-600 bg-transparent">
-                <MapPin className="w-4 h-4 mr-2" />
-                Ver no Mapa Completo
-              </Button>
-              <Button variant="outline" className="flex-1 border-blue-600 text-blue-600 bg-transparent">
-                <Navigation className="w-4 h-4 mr-2" />
-                Obter Direções
-              </Button>
-            </div>
+<div className="flex flex-col sm:flex-row gap-3 mt-4 w-full">
+  <Button
+    variant="outline"
+    className="flex-1 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 text-sm sm:text-base flex items-center justify-center whitespace-nowrap"
+  >
+    <MapPin className="w-4 h-4 mr-2 shrink-0" />
+    Ver no Mapa Completo
+  </Button>
+
+  <Button
+    variant="outline"
+    className="flex-1 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 text-sm sm:text-base flex items-center justify-center whitespace-nowrap"
+  >
+    <Navigation className="w-4 h-4 mr-2 shrink-0" />
+    Obter Direções
+  </Button>
+</div>
+
           </CardContent>
         </Card>
 

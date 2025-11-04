@@ -78,26 +78,25 @@ export default function NotificationsScreen({ navigateTo }: NotificationsScreenP
         <h1 className="text-xl font-bold ml-4">Notificações</h1>
       </div>
 
-      <div className="p-4">
-        <Card className="border-blue-100">
-          <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle className="text-blue-900 flex items-center">
-              <Bell className="w-5 h-5 mr-2" />
-              Suas Notificações
-            </CardTitle>
-            <Button variant="link" className="text-sm text-blue-600 p-0 h-auto">
-              Marcar todas como lidas
-            </Button>
-          </CardHeader>
-          <CardContent className="p-0">
-            <ScrollArea className="h-[60vh]">
-              {mockNotifications.map((notification) => (
-                <NotificationItem key={notification.id} notification={notification} />
-              ))}
-            </ScrollArea>
-          </CardContent>
-        </Card>
-      </div>
+      <div className="px-4 py-6 flex justify-center">
+  <Card className="w-full max-w-2xl shadow-md border border-blue-100">
+    <CardHeader className="flex flex-row items-center justify-between pb-3 border-b border-blue-100">
+      <CardTitle className="text-blue-900 flex items-center text-base">
+        <Bell className="w-5 h-5 mr-2" />
+        Suas Notificações
+      </CardTitle>
+    </CardHeader>
+
+    <CardContent className="p-0">
+      <ScrollArea className="max-h-[60vh] overflow-y-auto">
+        {mockNotifications.map((notification) => (
+          <NotificationItem key={notification.id} notification={notification} />
+        ))}
+      </ScrollArea>
+    </CardContent>
+  </Card>
+</div>
+
     </div>
   )
 }
