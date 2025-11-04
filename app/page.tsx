@@ -1,4 +1,4 @@
-import TourismApp from "../tourism-app"
+import TourismApp from "@/app/src/App";
 
 export default function Page() {
   return <TourismApp />
