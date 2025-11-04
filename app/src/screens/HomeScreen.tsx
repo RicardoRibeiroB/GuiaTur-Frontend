@@ -121,9 +121,9 @@ export default function HomeScreen({ userRole, navigateTo, routes, renderStarRat
           />
         </div>
       </div>
-
-      {/* Quick Actions for Admin */}
-      {userRole === "admin" && (
+    {/* mudandocç */}
+      {/* Quick Actions for Admin and Publisher */}
+      {(userRole === "admin" || userRole === "publisher") && (
         <div className="p-4 bg-blue-50">
           <div className="flex space-x-3 overflow-x-auto">
             <Button
